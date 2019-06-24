@@ -1,5 +1,17 @@
 nameresponse = input("你叫什么名字？ ")
 
+#punctionation testing
+import re
+def remove_punctuation(pattern,nameresponse):
+    for pat in pattern:
+        return(re.findall(pat,nameresponse))
+        return('\n')
+        
+pattern=['[^!！.。，,?？]+']
+ 
+nameresponse = ("".join(remove_punctuation(pattern,nameresponse)))
+ #end punctuation testing
+
 if "叫" in nameresponse:
 	name = nameresponse.split("叫")[1]
 elif "是" in nameresponse:
@@ -7,7 +19,7 @@ elif "是" in nameresponse:
 else:
 	name = nameresponse
 print(name + "，你好。你有很漂亮的名字！我叫麦伊茹。我很高心认识你。")
-	
+
 ageresponse = input(name +"， 你多大？")
 
 if "岁" in ageresponse:
@@ -66,7 +78,7 @@ if "不" in path:
 		print("🇷🇴 🇷🇴 🇷🇴 🇷🇴 🇷🇴 🇷🇴 🇷🇴 🥰 🥰 🥰 🥰 ✨ ✨ ✨")
 
 	elif "法国" in home:
-		print("不好 👎 🇫🇷 💩")
+		print("不好 👎 🇫🇷  💩")
 
 	else:
 		print("我想去哪儿路行！ ")
